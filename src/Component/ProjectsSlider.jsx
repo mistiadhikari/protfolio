@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { allProjects } from "../Data/ProjectsData";
 
@@ -64,11 +65,12 @@ const ProjectsSlider = () => {
       </div>
 
       <div className="mt-10 text-center">
-        <a href="/project">
-          <button className="w-[92%] rounded-full bg-purple-600 px-6 py-3 text-white sm:w-auto">
-            View All Projects
-          </button>
-        </a>
+        <Link
+          to="/project"
+          className="inline-block w-[92%] rounded-full bg-purple-600 px-6 py-3 text-center text-white sm:w-auto"
+        >
+          View All Projects
+        </Link>
       </div>
     </section>
   );
