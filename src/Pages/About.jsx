@@ -1,94 +1,125 @@
 import React from "react";
+import { FaArrowRight, FaGraduationCap, FaLaptopCode, FaLightbulb } from "react-icons/fa";
 import Miss from "../assets/miss.jpeg";
+
+const highlights = [
+  {
+    title: "Education",
+    description: "Bachelor of Information Management with a growing interest in building modern digital products.",
+    icon: <FaGraduationCap />,
+  },
+  {
+    title: "Current Focus",
+    description: "Sharpening my frontend and full stack skills through React projects and hands-on practice.",
+    icon: <FaLaptopCode />,
+  },
+  {
+    title: "Mindset",
+    description: "Curious, creative, and committed to turning ideas into clean and user-friendly experiences.",
+    icon: <FaLightbulb />,
+  },
+];
 
 const About = () => {
   return (
-    <div className="bg-gray-50 min-h-screen py-16">
+    <section className="relative overflow-hidden bg-gradient-to-br from-rose-50 via-white to-violet-100 py-20">
+      <div className="absolute left-0 top-16 h-40 w-40 rounded-full bg-pink-200/40 blur-3xl" />
+      <div className="absolute right-0 top-0 h-56 w-56 rounded-full bg-purple-200/40 blur-3xl" />
+      <div className="absolute bottom-10 left-1/3 h-44 w-44 rounded-full bg-fuchsia-100/60 blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="relative mx-auto max-w-7xl px-6">
+        <div className="mb-14 text-center">
+          <p className="mb-3 inline-block rounded-full bg-white/80 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-purple-600 shadow-sm">
+            Get To Know Me
+          </p>
+          <h1 className="text-4xl font-bold text-gray-900 md:text-5xl">
+            About Me
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+            A learner who enjoys blending creativity, technology, and curiosity to build meaningful web experiences.
+          </p>
+        </div>
 
-        {/* Title */}
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">
-          About Me
-        </h1>
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
+          <div className="relative mx-auto w-full max-w-md">
+            <div className="absolute -left-6 top-8 h-24 w-24 rounded-3xl bg-pink-400/20 blur-xl" />
+            <div className="absolute -right-8 bottom-10 h-32 w-32 rounded-full bg-purple-400/20 blur-2xl" />
 
-        {/* Profile + Intro */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative rounded-[2rem] border border-white/70 bg-white/70 p-4 shadow-2xl backdrop-blur-md">
+              <div className="absolute left-6 top-6 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-gray-700 shadow">
+                Creative Developer Journey
+              </div>
 
-          {/* Image */}
-          <div className="flex justify-center">
-            <img
-              src={Miss}
-              alt="Profile"
-              className="w-72 h-72 object-cover rounded-2xl shadow-lg"
-            />
+              <img
+                src={Miss}
+                alt="Misti portrait"
+                className="h-[28rem] w-full rounded-[1.5rem] object-cover"
+              />
+
+              <div className="absolute -bottom-6 right-6 max-w-[14rem] rounded-2xl bg-gray-900 px-5 py-4 text-white shadow-xl">
+                <p className="text-sm font-medium text-purple-200">Currently exploring</p>
+                <p className="mt-1 text-lg font-semibold">React, UI design, and full stack development</p>
+              </div>
+            </div>
           </div>
 
-          {/* Text */}
-          <div>
-            <h2 className="text-2xl font-semibold text-purple-600 mb-4">
-              Hello! I'm Misti
+          <div className="rounded-[2rem] border border-white/70 bg-white/75 p-8 shadow-xl backdrop-blur-md md:p-10">
+            <h2 className="text-3xl font-bold text-gray-900">
+              Hello! I'm <span className="text-purple-600">Misti</span>
             </h2>
 
-            <p className="text-gray-600 mb-4">
-              I recently graduated with a degree in 
-              <span className="font-semibold"> Bachelor of Information Management (BIM)</span>. 
-              My academic journey helped me understand digital construction 
-              technologies and modern project workflows.
-            </p>
+            <div className="mt-6 space-y-5 text-gray-600">
+              <p>
+                I recently graduated with a degree in
+                <span className="font-semibold text-gray-800"> Bachelor of Information Management (BIM)</span>.
+                My academic journey helped me understand how technology and structure can work together to solve real problems.
+              </p>
 
-            <p className="text-gray-600 mb-4">
-              Currently, I am exploring the world of 
-              <span className="font-semibold"> Full Stack Web Development</span>. 
-              I enjoy building responsive and user-friendly web applications 
-              using technologies like HTML, CSS, JavaScript, and React.
-            </p>
+              <p>
+                Right now, I am exploring
+                <span className="font-semibold text-gray-800"> Full Stack Web Development</span> and enjoying the process of building responsive, user-friendly applications with HTML, CSS, JavaScript, and React.
+              </p>
 
-            <p className="text-gray-600">
-              My goal is to combine my technical knowledge with creativity 
-              to build useful digital solutions and continuously improve 
-              my development skills.
-            </p>
+              <p>
+                My goal is to keep learning, strengthen my development skills, and create digital solutions that feel both useful and visually engaging.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl bg-gradient-to-br from-purple-600 to-fuchsia-500 p-5 text-white shadow-lg">
+                <p className="text-sm uppercase tracking-[0.2em] text-purple-100">Focus Area</p>
+                <p className="mt-2 text-xl font-semibold">Frontend and Full Stack Growth</p>
+              </div>
+
+              <div className="rounded-2xl border border-purple-100 bg-purple-50 p-5 shadow-sm">
+                <p className="text-sm uppercase tracking-[0.2em] text-purple-500">What Drives Me</p>
+                <p className="mt-2 text-xl font-semibold text-gray-800">Learning by building real projects</p>
+              </div>
+            </div>
+
+            <div className="mt-8 inline-flex items-center gap-3 rounded-full bg-gray-900 px-5 py-3 text-sm font-medium text-white shadow-lg">
+              Building step by step toward a confident developer career
+              <FaArrowRight className="text-purple-300" />
+            </div>
           </div>
-
         </div>
 
-
-        {/* Info Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
-
-          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
-            <h3 className="text-xl font-semibold text-purple-600 mb-2">
-              Education
-            </h3>
-            <p className="text-gray-600">
-              Bachelor Degree in Building Information Modeling (BIM)
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
-            <h3 className="text-xl font-semibold text-purple-600 mb-2">
-              Current Focus
-            </h3>
-            <p className="text-gray-600">
-              Learning Full Stack Development and building projects using React.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
-            <h3 className="text-xl font-semibold text-purple-600 mb-2">
-              Career Goal
-            </h3>
-            <p className="text-gray-600">
-              To become a skilled developer and work on modern web applications.
-            </p>
-          </div>
-
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
+          {highlights.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-[1.75rem] border border-white/70 bg-white/80 p-7 shadow-lg backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-600 to-pink-500 text-2xl text-white shadow-md">
+                {item.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+              <p className="mt-3 text-gray-600">{item.description}</p>
+            </div>
+          ))}
         </div>
-
       </div>
-
-    </div>
+    </section>
   );
 };
 
