@@ -54,36 +54,36 @@ const Home = () => {
 
           {/* RIGHT IMAGE WITH FLOATING ICONS */}
           <div className="flex justify-center">
-            <div className="relative flex items-center justify-center">
+            <div className="relative flex items-center justify-center w-[28rem] h-[24rem]">
 
               {/* Glow background */}
               <div className="absolute -inset-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-30"></div>
 
               {/* FLOATING ICONS */}
-              <FaReact className="absolute text-cyan-400 text-5xl top-0 left-10 float" />
+              <FaReact className="absolute text-cyan-400 text-5xl top-4 left-16 z-20 float" />
               
               <FaNodeJs
-                className="absolute text-green-500 text-5xl bottom-5 left-0 float"
+                className="absolute text-green-500 text-5xl bottom-8 left-12 z-20 float"
                 style={{ animationDelay: "1s" }}
               />
 
               <SiMongodb
-                className="absolute text-green-600 text-5xl top-10 right-0 float"
+                className="absolute text-green-600 text-5xl top-6 right-14 z-20 float"
                 style={{ animationDelay: "2s" }}
               />
 
               <SiExpress
-                className="absolute text-gray-700 text-5xl bottom-0 right-10 float"
+                className="absolute text-gray-700 text-5xl bottom-6 right-14 z-20 float"
                 style={{ animationDelay: "3s" }}
               />
 
               <FaGitAlt
-                className="absolute text-red-500 text-5xl top-1/2 -left-10 float"
+                className="absolute text-red-500 text-5xl top-1/2 left-2 -translate-y-1/2 z-20 float"
                 style={{ animationDelay: "2.5s" }}
               />
 
               <SiJavascript
-                className="absolute text-yellow-400 text-5xl top-1/2 -right-10 float"
+                className="absolute text-yellow-400 text-5xl top-1/2 right-2 -translate-y-1/2 z-20 float"
                 style={{ animationDelay: "1.5s" }}
               />
 
