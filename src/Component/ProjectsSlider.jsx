@@ -67,9 +67,9 @@ const ProjectsSlider = () => {
       <div className="mt-10 text-center">
         <Link
           to="/project"
-          className="inline-block w-[92%] rounded-full bg-purple-600 px-6 py-3 text-center text-white sm:w-auto"
+          className="bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700 transition text-center"
         >
-          View All Projects
+          View Projects
         </Link>
       </div>
     </section>
