@@ -22,20 +22,20 @@ const highlights = [
 
 const About = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-rose-50 via-white to-violet-100 py-20">
+    <section className="relative overflow-hidden bg-gradient-to-br from-rose-50 via-white to-violet-100 py-16 sm:py-20">
       <div className="absolute left-0 top-16 h-40 w-40 rounded-full bg-pink-200/40 blur-3xl" />
       <div className="absolute right-0 top-0 h-56 w-56 rounded-full bg-purple-200/40 blur-3xl" />
       <div className="absolute bottom-10 left-1/3 h-44 w-44 rounded-full bg-fuchsia-100/60 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
-        <div className="mb-14 text-center">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mb-12 sm:mb-14 text-center">
           <p className="mb-3 inline-block rounded-full bg-white/80 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-purple-600 shadow-sm">
             Get To Know Me
           </p>
-          <h1 className="text-4xl font-bold text-gray-900 md:text-5xl">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 md:text-5xl">
             About Me
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+          <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-gray-600">
             A learner who enjoys blending creativity, technology, and curiosity to build meaningful web experiences.
           </p>
         </div>
@@ -45,26 +45,26 @@ const About = () => {
             <div className="absolute -left-6 top-8 h-24 w-24 rounded-3xl bg-pink-400/20 blur-xl" />
             <div className="absolute -right-8 bottom-10 h-32 w-32 rounded-full bg-purple-400/20 blur-2xl" />
 
-            <div className="relative rounded-[2rem] border border-white/70 bg-white/70 p-4 shadow-2xl backdrop-blur-md">
-              <div className="absolute left-6 top-6 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-gray-700 shadow">
+            <div className="relative rounded-[2rem] border border-white/70 bg-white/70 p-3 sm:p-4 shadow-2xl backdrop-blur-md">
+              <div className="absolute left-4 top-4 sm:left-6 sm:top-6 max-w-[11rem] sm:max-w-none rounded-full bg-white/90 px-3 py-2 text-xs sm:text-sm font-semibold text-gray-700 shadow">
                 Creative Developer Journey
               </div>
 
               <img
                 src={Miss}
                 alt="Misti portrait"
-                className="h-[28rem] w-full rounded-[1.5rem] object-cover"
+                className="h-[22rem] sm:h-[26rem] lg:h-[28rem] w-full rounded-[1.5rem] object-cover"
               />
 
-              <div className="absolute -bottom-6 right-6 max-w-[14rem] rounded-2xl bg-gray-900 px-5 py-4 text-white shadow-xl">
+              <div className="absolute -bottom-4 right-4 sm:-bottom-6 sm:right-6 max-w-[12rem] sm:max-w-[14rem] rounded-2xl bg-gray-900 px-4 py-3 sm:px-5 sm:py-4 text-white shadow-xl">
                 <p className="text-sm font-medium text-purple-200">Currently exploring</p>
-                <p className="mt-1 text-lg font-semibold">React, UI design, and full stack development</p>
+                <p className="mt-1 text-sm sm:text-lg font-semibold">React, UI design, and full stack development</p>
               </div>
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-white/70 bg-white/75 p-8 shadow-xl backdrop-blur-md md:p-10">
-            <h2 className="text-3xl font-bold text-gray-900">
+          <div className="rounded-[2rem] border border-white/70 bg-white/75 p-6 sm:p-8 shadow-xl backdrop-blur-md md:p-10">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
               Hello! I'm <span className="text-purple-600">Misti</span>
             </h2>
 
@@ -97,7 +97,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="mt-8 inline-flex items-center gap-3 rounded-full bg-gray-900 px-5 py-3 text-sm font-medium text-white shadow-lg">
+            <div className="mt-8 inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-gray-900 px-5 py-3 text-center text-sm font-medium text-white shadow-lg">
               Building step by step toward a confident developer career
               <FaArrowRight className="text-purple-300" />
             </div>

@@ -1,14 +1,16 @@
 import React from "react";
 import {
-  FaHtml5,
+  FaBolt,
   FaCss3Alt,
-  FaJs,
-  FaReact,
   FaGitAlt,
   FaGithub,
+  FaHtml5,
+  FaJs,
+  FaMobileAlt,
   FaNodeJs,
+  FaReact,
 } from "react-icons/fa";
-import { SiTailwindcss, SiVite, SiExpress, SiMongodb } from "react-icons/si";
+import { SiExpress, SiMongodb, SiTailwindcss, SiVite } from "react-icons/si";
 
 const skillCategories = [
   {
@@ -27,7 +29,7 @@ const skillCategories = [
       { name: "Node.js", icon: <FaNodeJs />, color: "text-green-600" },
       { name: "Express.js", icon: <SiExpress />, color: "text-gray-700" },
       { name: "MongoDB", icon: <SiMongodb />, color: "text-green-500" },
-      { name: "REST APIs", icon: "⚡", color: "text-purple-500" },
+      { name: "REST APIs", icon: <FaBolt />, color: "text-purple-500" },
     ],
   },
   {
@@ -36,44 +38,37 @@ const skillCategories = [
       { name: "Git", icon: <FaGitAlt />, color: "text-red-500" },
       { name: "GitHub", icon: <FaGithub />, color: "text-gray-800" },
       { name: "Vite", icon: <SiVite />, color: "text-purple-500" },
-      { name: "Responsive Design", icon: "📱", color: "text-pink-500" },
+      { name: "Responsive Design", icon: <FaMobileAlt />, color: "text-pink-500" },
     ],
   },
 ];
 
 const Skills = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-indigo-50 via-white to-pink-50">
-      <div className="max-w-6xl mx-auto px-6">
-
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-20">
+    <section className="bg-gradient-to-br from-indigo-50 via-white to-pink-50 py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <h1 className="mb-14 text-center text-3xl font-bold sm:mb-20 sm:text-4xl md:text-5xl">
           My Tech Stack
         </h1>
 
-        {/* Category Sections */}
-        <div className="grid md:grid-cols-3 gap-10">
-
+        <div className="grid gap-6 md:grid-cols-2 md:gap-10 xl:grid-cols-3">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="backdrop-blur-lg bg-white/70 border border-white/40
-              rounded-3xl p-8 shadow-xl hover:shadow-2xl transition duration-500"
+              className="rounded-3xl border border-white/40 bg-white/70 p-6 shadow-xl backdrop-blur-lg transition duration-500 hover:shadow-2xl sm:p-8"
             >
-              <h2 className="text-2xl font-bold mb-8 text-center">
+              <h2 className="mb-6 text-center text-xl font-bold sm:mb-8 sm:text-2xl">
                 {category.title}
               </h2>
 
-              <div className="flex flex-wrap justify-center gap-6">
+              <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
                 {category.skills.map((skill, i) => (
                   <div
                     key={i}
-                    className="flex flex-col items-center group cursor-pointer"
+                    className="group flex cursor-pointer flex-col items-center"
                   >
-                    {/* Glowing circle */}
                     <div
-                      className={`w-16 h-16 flex items-center justify-center text-3xl rounded-full
-                      bg-white shadow-md group-hover:scale-110 group-hover:shadow-2xl
-                      transition duration-300 ${skill.color}`}
+                      className={`flex h-14 w-14 items-center justify-center rounded-full bg-white text-2xl shadow-md transition duration-300 group-hover:scale-110 group-hover:shadow-2xl sm:h-16 sm:w-16 sm:text-3xl ${skill.color}`}
                     >
                       {skill.icon}
                     </div>
@@ -86,11 +81,9 @@ const Skills = () => {
               </div>
             </div>
           ))}
-
         </div>
 
-        {/* Floating badges */}
-        <div className="mt-20 flex flex-wrap justify-center gap-4">
+        <div className="mt-16 flex flex-wrap justify-center gap-3 sm:mt-20 sm:gap-4">
           {[
             "Problem Solving",
             "Team Collaboration",
@@ -100,14 +93,12 @@ const Skills = () => {
           ].map((badge, i) => (
             <span
               key={i}
-              className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500
-              text-white rounded-full shadow-lg hover:scale-110 transition"
+              className="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 text-sm text-white shadow-lg transition hover:scale-110 sm:px-6 sm:py-3 sm:text-base"
             >
               {badge}
             </span>
           ))}
         </div>
-
       </div>
     </section>
   );

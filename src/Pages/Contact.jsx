@@ -70,34 +70,34 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(236,72,153,0.18),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(147,51,234,0.16),_transparent_28%),linear-gradient(180deg,_#fffdfd_0%,_#faf5ff_48%,_#fff8f1_100%)] py-20">
+    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(236,72,153,0.18),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(147,51,234,0.16),_transparent_28%),linear-gradient(180deg,_#fffdfd_0%,_#faf5ff_48%,_#fff8f1_100%)] py-16 sm:py-20">
       <div className="absolute left-0 top-20 h-52 w-52 rounded-full bg-pink-200/40 blur-3xl" />
       <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-violet-200/40 blur-3xl" />
       <div className="absolute bottom-10 left-1/3 h-48 w-48 rounded-full bg-orange-100/60 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mb-14 text-center">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-purple-600 shadow-sm backdrop-blur-md">
             <FaPaperPlane className="text-pink-500" />
             Let's Connect
           </p>
 
-          <h1 className="mt-6 text-4xl font-bold text-gray-900 md:text-5xl">
+          <h1 className="mt-6 text-3xl sm:text-4xl font-bold text-gray-900 md:text-5xl">
             Contact Me
           </h1>
 
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+          <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-gray-600">
             Whether you want to collaborate, ask a question, or simply say hello, I would love to hear from you.
           </p>
         </div>
 
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="rounded-[2rem] border border-white/70 bg-gradient-to-br from-gray-950 via-purple-950 to-fuchsia-900 p-8 text-white shadow-2xl">
+          <div className="rounded-[2rem] border border-white/70 bg-gradient-to-br from-gray-950 via-purple-950 to-fuchsia-900 p-6 sm:p-8 text-white shadow-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-200">
               Open For Opportunities
             </p>
 
-            <h2 className="mt-4 text-3xl font-bold leading-tight">
+            <h2 className="mt-4 text-2xl sm:text-3xl font-bold leading-tight">
               Let's build something thoughtful, useful, and beautiful together.
             </h2>
 
@@ -116,11 +116,11 @@ const Contact = () => {
                     {item.icon}
                   </div>
 
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-sm uppercase tracking-[0.16em] text-purple-200">
                       {item.title}
                     </p>
-                    <p className="mt-1 font-medium text-white">{item.value}</p>
+                    <p className="mt-1 break-all font-medium text-white">{item.value}</p>
                   </div>
                 </a>
               ))}
@@ -138,7 +138,7 @@ const Contact = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition ${social.hover}`}
+                    className={`inline-flex w-full justify-center sm:w-auto items-center gap-3 rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition ${social.hover}`}
                   >
                     <span className="text-lg">{social.icon}</span>
                     {social.name}
@@ -157,13 +157,13 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-2xl backdrop-blur-md md:p-10">
-            <div className="mb-8 flex items-center justify-between gap-4">
+          <div className="rounded-[2rem] border border-white/70 bg-white/80 p-6 sm:p-8 shadow-2xl backdrop-blur-md md:p-10">
+            <div className="mb-8 flex items-start justify-between gap-4">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-500">
                   Send A Message
                 </p>
-                <h2 className="mt-2 text-3xl font-bold text-gray-900">
+                <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900">
                   Start the conversation
                 </h2>
               </div>
@@ -228,7 +228,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-[1.02]"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-[1.02]"
                 >
                   Send Message
                   <FaPaperPlane />

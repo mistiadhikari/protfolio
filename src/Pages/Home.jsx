@@ -14,15 +14,15 @@ const Home = () => {
   return (
     <div>
       <div className="min-h-screen bg-gray-50 flex items-center">
-        <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 grid md:grid-cols-2 gap-10 items-center">
 
           {/* LEFT CONTENT */}
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
               Hello, I'm <span className="text-purple-600">Misti</span>
             </h2>
 
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-base sm:text-lg text-gray-600">
               A passionate learner exploring the world of
               <span className="font-semibold"> Full Stack Development</span>.
               I recently graduated in
@@ -35,17 +35,17 @@ const Home = () => {
             </p>
 
             {/* BUTTONS */}
-            <div className="mt-6 flex gap-4">
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
                 to="/project"
-                className="bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700 transition"
+                className="bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700 transition text-center"
               >
                 View Projects
               </Link>
 
               <Link
                 to="/contact"
-                className="border border-purple-600 text-purple-600 px-6 py-3 rounded-full hover:bg-purple-600 hover:text-white transition"
+                className="border border-purple-600 text-purple-600 px-6 py-3 rounded-full hover:bg-purple-600 hover:text-white transition text-center"
               >
                 Contact Me
               </Link>
@@ -54,36 +54,36 @@ const Home = () => {
 
           {/* RIGHT IMAGE WITH FLOATING ICONS */}
           <div className="flex justify-center">
-            <div className="relative flex items-center justify-center w-[28rem] h-[24rem]">
+            <div className="relative flex items-center justify-center w-full max-w-[28rem] h-[18rem] sm:h-[22rem] md:h-[24rem]">
 
               {/* Glow background */}
               <div className="absolute -inset-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-30"></div>
 
               {/* FLOATING ICONS */}
-              <FaReact className="absolute text-cyan-400 text-5xl top-4 left-16 z-20 float" />
+              <FaReact className="absolute text-cyan-400 text-3xl sm:text-4xl md:text-5xl top-3 left-8 sm:left-14 md:left-16 z-20 float" />
               
               <FaNodeJs
-                className="absolute text-green-500 text-5xl bottom-8 left-12 z-20 float"
+                className="absolute text-green-500 text-3xl sm:text-4xl md:text-5xl bottom-6 left-6 sm:left-10 md:left-12 z-20 float"
                 style={{ animationDelay: "1s" }}
               />
 
               <SiMongodb
-                className="absolute text-green-600 text-5xl top-6 right-14 z-20 float"
+                className="absolute text-green-600 text-3xl sm:text-4xl md:text-5xl top-5 right-8 sm:right-12 md:right-14 z-20 float"
                 style={{ animationDelay: "2s" }}
               />
 
               <SiExpress
-                className="absolute text-gray-700 text-5xl bottom-6 right-14 z-20 float"
+                className="absolute text-gray-700 text-3xl sm:text-4xl md:text-5xl bottom-4 right-8 sm:right-12 md:right-14 z-20 float"
                 style={{ animationDelay: "3s" }}
               />
 
               <FaGitAlt
-                className="absolute text-red-500 text-5xl top-1/2 left-2 -translate-y-1/2 z-20 float"
+                className="absolute text-red-500 text-3xl sm:text-4xl md:text-5xl top-1/2 left-0 sm:left-1 md:left-2 -translate-y-1/2 z-20 float"
                 style={{ animationDelay: "2.5s" }}
               />
 
               <SiJavascript
-                className="absolute text-yellow-400 text-5xl top-1/2 right-2 -translate-y-1/2 z-20 float"
+                className="absolute text-yellow-400 text-3xl sm:text-4xl md:text-5xl top-1/2 right-0 sm:right-1 md:right-2 -translate-y-1/2 z-20 float"
                 style={{ animationDelay: "1.5s" }}
               />
 
@@ -91,7 +91,7 @@ const Home = () => {
               <img
                 src={Hello}
                 alt="Profile"
-                className="relative w-72 h-72 object-cover rounded-full border-4 border-white shadow-2xl z-10"
+                className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 object-cover rounded-full border-4 border-white shadow-2xl z-10"
               />
 
             </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { allProjects } from "../Data/ProjectsData";
 
@@ -7,9 +7,7 @@ const ProjectsSlider = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent(prev =>
-        prev === allProjects.length - 1 ? 0 : prev + 1
-      );
+      setCurrent((prev) => (prev === allProjects.length - 1 ? 0 : prev + 1));
     }, 3000);
 
     return () => clearInterval(interval);
@@ -24,28 +22,27 @@ const ProjectsSlider = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
-      <h2 className="text-4xl font-bold text-center mb-12">
+    <section className="bg-gray-50 py-16 sm:py-20">
+      <h2 className="mb-10 px-4 text-center text-3xl font-bold sm:mb-12 sm:text-4xl">
         Featured Projects
       </h2>
 
-      <div className="relative w-11/12 md:max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-lg">
-
+      <div className="relative mx-auto w-[92%] overflow-hidden rounded-2xl shadow-lg md:max-w-4xl">
         <div
           className="flex transition-transform duration-700"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {allProjects.map((project, index) => (
-            <div key={index} className="min-w-full relative">
+            <div key={index} className="relative min-w-full">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-[420px] object-cover"
+                className="h-[320px] w-full object-cover sm:h-[380px] md:h-[420px]"
               />
 
-              <div className="absolute bottom-0 bg-black/70 text-white w-full p-6">
-                <h2 className="text-2xl font-bold">{project.title}</h2>
-                <p className="text-sm mt-1">{project.description}</p>
+              <div className="absolute bottom-0 w-full bg-black/70 p-4 text-white sm:p-6">
+                <h2 className="text-xl font-bold sm:text-2xl">{project.title}</h2>
+                <p className="mt-1 text-sm">{project.description}</p>
               </div>
             </div>
           ))}
@@ -53,23 +50,23 @@ const ProjectsSlider = () => {
 
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 left-3 -translate-y-1/2 bg-white p-3 rounded-full shadow"
+          className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white p-2 shadow sm:left-3 sm:p-3"
         >
           <FaArrowLeft />
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute top-1/2 right-3 -translate-y-1/2 bg-white p-3 rounded-full shadow"
+          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white p-2 shadow sm:right-3 sm:p-3"
         >
           <FaArrowRight />
         </button>
       </div>
 
-      <div className="text-center mt-10">
+      <div className="mt-10 text-center">
         <a href="/project">
-          <button className="bg-purple-600 text-white px-6 py-3 rounded-full">
-            View All Projects →
+          <button className="w-[92%] rounded-full bg-purple-600 px-6 py-3 text-white sm:w-auto">
+            View All Projects
           </button>
         </a>
       </div>

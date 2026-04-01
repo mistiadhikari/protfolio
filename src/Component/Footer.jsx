@@ -1,24 +1,18 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-black mt-16">
-      <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between">
+    <footer className="mt-16 bg-white text-black">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-center sm:px-6 md:flex-row md:text-left">
+        <h2 className="text-lg font-bold sm:text-xl">Misti Portfolio</h2>
 
-        {/* Logo / Name */}
-        <h2 className="text-xl font-bold mb-4 md:mb-0">
-          Misti Portfolio
-        </h2>
-
-        {/* Social Icons */}
-        <div className="flex gap-6 text-2xl">
-
+        <div className="flex flex-wrap justify-center gap-5 text-2xl sm:gap-6">
           <a
             href="https://github.com/mistiadhikari"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-600 transition"
+            className="transition hover:text-gray-600"
           >
             <FaGithub />
           </a>
@@ -27,7 +21,7 @@ const Footer = () => {
             href="https://linkedin.com/misti-adhikari-08am24"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-600 transition"
+            className="transition hover:text-blue-600"
           >
             <FaLinkedin />
           </a>
@@ -36,17 +30,15 @@ const Footer = () => {
             href="https://www.instagram.com/mistiiiiiii__/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-pink-500 transition"
+            className="transition hover:text-pink-500"
           >
             <FaInstagram />
           </a>
-
         </div>
       </div>
 
-      {/* Bottom text */}
-      <div className="text-center text-sm py-4">
-        © {new Date().getFullYear()} Misti. All Rights Reserved.
+      <div className="px-4 py-4 text-center text-sm">
+        &copy; {new Date().getFullYear()} Misti. All Rights Reserved.
       </div>
     </footer>
   );
