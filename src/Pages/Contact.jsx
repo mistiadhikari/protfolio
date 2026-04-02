@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import {
   FaArrowRight,
   FaEnvelope,
@@ -53,6 +54,7 @@ const socials = [
 ];
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("xreoagvl");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -63,11 +65,41 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Thank you for your message! I will get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+  const onSubmit = async (e) => {
+    await handleSubmit(e);
   };
+
+  useEffect(() => {
+    if (state.succeeded) {
+      setFormData({ name: "", email: "", message: "" });
+    }
+  }, [state.succeeded]);
+
+  if (state.succeeded) {
+    return (
+      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(236,72,153,0.18),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(147,51,234,0.16),_transparent_28%),linear-gradient(180deg,_#fffdfd_0%,_#faf5ff_48%,_#fff8f1_100%)] py-16 sm:py-20">
+        <div className="absolute left-0 top-20 h-52 w-52 rounded-full bg-pink-200/40 blur-3xl" />
+        <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-violet-200/40 blur-3xl" />
+        <div className="absolute bottom-10 left-1/3 h-48 w-48 rounded-full bg-orange-100/60 blur-3xl" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="rounded-[2rem] border border-white/70 bg-white/80 p-6 text-center shadow-2xl backdrop-blur-md sm:p-8 md:p-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-500">
+              Message Sent
+            </p>
+            <h2 className="mt-3 text-2xl font-bold text-gray-900 sm:text-3xl">
+              Thank you for reaching out
+            </h2>
+            <p className="mt-4 text-base text-gray-600 sm:text-lg">
+              Your message has been submitted successfully. I will get back to you soon.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  const formError = state.errors?.find((error) => error.field === null);
 
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(236,72,153,0.18),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(147,51,234,0.16),_transparent_28%),linear-gradient(180deg,_#fffdfd_0%,_#faf5ff_48%,_#fff8f1_100%)] py-16 sm:py-20">
@@ -173,7 +205,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={onSubmit} className="space-y-5">
               <div className="grid gap-5 md:grid-cols-2">
                 <label className="block">
                   <span className="mb-2 block text-sm font-medium text-gray-700">
@@ -187,6 +219,12 @@ const Contact = () => {
                     placeholder="Enter your name"
                     required
                     className="w-full rounded-2xl border border-purple-100 bg-purple-50/60 px-4 py-3 text-gray-800 outline-none transition focus:border-purple-400 focus:bg-white focus:ring-4 focus:ring-purple-100"
+                  />
+                  <ValidationError
+                    prefix="Name"
+                    field="name"
+                    errors={state.errors}
+                    className="mt-2 block text-sm text-red-500"
                   />
                 </label>
 
@@ -202,6 +240,12 @@ const Contact = () => {
                     placeholder="Enter your email"
                     required
                     className="w-full rounded-2xl border border-purple-100 bg-purple-50/60 px-4 py-3 text-gray-800 outline-none transition focus:border-purple-400 focus:bg-white focus:ring-4 focus:ring-purple-100"
+                  />
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                    className="mt-2 block text-sm text-red-500"
                   />
                 </label>
               </div>
@@ -219,7 +263,17 @@ const Contact = () => {
                   required
                   className="w-full rounded-[1.5rem] border border-purple-100 bg-purple-50/60 px-4 py-3 text-gray-800 outline-none transition focus:border-purple-400 focus:bg-white focus:ring-4 focus:ring-purple-100"
                 />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                  className="mt-2 block text-sm text-red-500"
+                />
               </label>
+
+              {formError ? (
+                <p className="text-sm text-red-500">{formError.message}</p>
+              ) : null}
 
               <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
                 <p className="max-w-sm text-sm text-gray-500">
@@ -228,9 +282,10 @@ const Contact = () => {
 
                 <button
                   type="submit"
+                  disabled={state.submitting}
                   className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-[1.02]"
                 >
-                  Send Message
+                  {state.submitting ? "Sending..." : "Send Message"}
                   <FaPaperPlane />
                 </button>
               </div>
