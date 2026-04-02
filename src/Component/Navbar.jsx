@@ -13,8 +13,10 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 shadow-lg">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
         <h1 className="text-lg font-bold tracking-wide text-white sm:text-2xl">
-          Misti.dev
+          Misti<span className="text-yellow-400">.dev</span>
         </h1>
+       
+        
 
         <div className="hidden gap-8 md:flex">
           <NavLink to="/" className={navLinkStyle}>
