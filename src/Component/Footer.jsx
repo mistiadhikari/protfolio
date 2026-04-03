@@ -3,7 +3,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="mt-16 bg-white text-black">
+    <footer className="mt-16 border-t border-slate-200 bg-white text-black transition-colors duration-300 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-center sm:px-6 md:flex-row md:text-left">
         <h2 className="text-lg font-bold sm:text-xl">Misti Portfolio</h2>
 
@@ -12,7 +12,7 @@ const Footer = () => {
             href="https://github.com/mistiadhikari"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition hover:text-gray-600"
+            className="transition hover:text-gray-600 dark:hover:text-slate-300"
           >
             <FaGithub />
           </a>

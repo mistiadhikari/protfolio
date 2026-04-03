@@ -23,12 +23,12 @@ const ProjectsSlider = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-16 sm:py-20">
-      <h2 className="mb-10 px-4 text-center text-3xl font-bold sm:mb-12 sm:text-4xl">
+    <section className="bg-gray-50 py-16 transition-colors duration-300 dark:bg-slate-950 sm:py-20">
+      <h2 className="mb-10 px-4 text-center text-3xl font-bold text-slate-900 dark:text-slate-100 sm:mb-12 sm:text-4xl">
         Featured Projects
       </h2>
 
-      <div className="relative mx-auto w-[92%] overflow-hidden rounded-2xl shadow-lg md:max-w-4xl">
+      <div className="relative mx-auto w-[92%] overflow-hidden rounded-2xl shadow-lg shadow-slate-300/40 dark:shadow-black/30 md:max-w-4xl">
         <div
           className="flex transition-transform duration-700"
           style={{ transform: `translateX(-${current * 100}%)` }}
@@ -51,14 +51,14 @@ const ProjectsSlider = () => {
 
         <button
           onClick={prevSlide}
-          className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white p-2 shadow sm:left-3 sm:p-3"
+          className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white p-2 text-slate-900 shadow dark:bg-slate-900 dark:text-slate-100 sm:left-3 sm:p-3"
         >
           <FaArrowLeft />
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white p-2 shadow sm:right-3 sm:p-3"
+          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white p-2 text-slate-900 shadow dark:bg-slate-900 dark:text-slate-100 sm:right-3 sm:p-3"
         >
           <FaArrowRight />
         </button>
@@ -67,7 +67,7 @@ const ProjectsSlider = () => {
       <div className="mt-10 text-center">
         <Link
           to="/project"
-          className="bg-purple-600 text-white px-6 py-3 rounded-full shadow hover:bg-purple-700 transition text-center"
+          className="rounded-full bg-purple-600 px-6 py-3 text-center text-white shadow transition hover:bg-purple-700"
         >
           View Projects
         </Link>

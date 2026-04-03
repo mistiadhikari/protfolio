@@ -77,20 +77,20 @@ const Contact = () => {
 
   if (state.succeeded) {
     return (
-      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(236,72,153,0.18),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(147,51,234,0.16),_transparent_28%),linear-gradient(180deg,_#fffdfd_0%,_#faf5ff_48%,_#fff8f1_100%)] py-16 sm:py-20">
+      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(236,72,153,0.18),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(147,51,234,0.16),_transparent_28%),linear-gradient(180deg,_#fffdfd_0%,_#faf5ff_48%,_#fff8f1_100%)] py-16 transition-colors duration-300 dark:bg-[radial-gradient(circle_at_top_left,_rgba(236,72,153,0.12),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(99,102,241,0.12),_transparent_28%),linear-gradient(180deg,_#020617_0%,_#111827_48%,_#172033_100%)] sm:py-20">
         <div className="absolute left-0 top-20 h-52 w-52 rounded-full bg-pink-200/40 blur-3xl" />
         <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-violet-200/40 blur-3xl" />
         <div className="absolute bottom-10 left-1/3 h-48 w-48 rounded-full bg-orange-100/60 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="rounded-[2rem] border border-white/70 bg-white/80 p-6 text-center shadow-2xl backdrop-blur-md sm:p-8 md:p-10">
+          <div className="rounded-[2rem] border border-white/70 bg-white/80 p-6 text-center shadow-2xl backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/80 sm:p-8 md:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-500">
               Message Sent
             </p>
-            <h2 className="mt-3 text-2xl font-bold text-gray-900 sm:text-3xl">
+            <h2 className="mt-3 text-2xl font-bold text-gray-900 dark:text-slate-100 sm:text-3xl">
               Thank you for reaching out
             </h2>
-            <p className="mt-4 text-base text-gray-600 sm:text-lg">
+            <p className="mt-4 text-base text-gray-600 dark:text-slate-300 sm:text-lg">
               Your message has been submitted successfully. I will get back to you soon.
             </p>
           </div>
@@ -102,39 +102,42 @@ const Contact = () => {
   const formError = state.errors?.find((error) => error.field === null);
 
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(236,72,153,0.18),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(147,51,234,0.16),_transparent_28%),linear-gradient(180deg,_#fffdfd_0%,_#faf5ff_48%,_#fff8f1_100%)] py-16 sm:py-20">
+    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(236,72,153,0.18),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(147,51,234,0.16),_transparent_28%),linear-gradient(180deg,_#fffdfd_0%,_#faf5ff_48%,_#fff8f1_100%)] py-16 transition-colors duration-300 dark:bg-[radial-gradient(circle_at_top_left,_rgba(236,72,153,0.12),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(99,102,241,0.12),_transparent_28%),linear-gradient(180deg,_#020617_0%,_#111827_48%,_#172033_100%)] sm:py-20">
       <div className="absolute left-0 top-20 h-52 w-52 rounded-full bg-pink-200/40 blur-3xl" />
       <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-violet-200/40 blur-3xl" />
       <div className="absolute bottom-10 left-1/3 h-48 w-48 rounded-full bg-orange-100/60 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mb-14 text-center">
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-purple-600 shadow-sm backdrop-blur-md">
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-purple-600 shadow-sm backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/80 dark:text-purple-300">
             <FaPaperPlane className="text-pink-500" />
             Let's Connect
           </p>
 
-          <h1 className="mt-6 text-3xl sm:text-4xl font-bold text-gray-900 md:text-5xl">
+          <h1 className="mt-6 text-3xl font-bold text-gray-900 dark:text-slate-100 sm:text-4xl md:text-5xl">
             Contact Me
           </h1>
 
-          <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-gray-600">
-            Whether you want to collaborate, ask a question, or simply say hello, I would love to hear from you.
+          <p className="mx-auto mt-4 max-w-2xl text-base text-gray-600 dark:text-slate-300 sm:text-lg">
+            Whether you want to collaborate, ask a question, or simply say hello, I
+            would love to hear from you.
           </p>
         </div>
 
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="rounded-[2rem] border border-white/70 bg-gradient-to-br from-gray-950 via-purple-950 to-fuchsia-900 p-6 sm:p-8 text-white shadow-2xl">
+          <div className="rounded-[2rem] border border-white/70 bg-gradient-to-br from-gray-950 via-purple-950 to-fuchsia-900 p-6 text-white shadow-2xl dark:border-slate-800 sm:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-200">
               Open For Opportunities
             </p>
 
-            <h2 className="mt-4 text-2xl sm:text-3xl font-bold leading-tight">
+            <h2 className="mt-4 text-2xl font-bold leading-tight sm:text-3xl">
               Let's build something thoughtful, useful, and beautiful together.
             </h2>
 
             <p className="mt-5 text-purple-100">
-              I am continuously learning and creating projects in web development. If you have an idea, feedback, or an opportunity to share, feel free to reach out.
+              I am continuously learning and creating projects in web development. If
+              you have an idea, feedback, or an opportunity to share, feel free to
+              reach out.
             </p>
 
             <div className="mt-8 space-y-4">
@@ -170,7 +173,7 @@ const Contact = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex w-full justify-center sm:w-auto items-center gap-3 rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition ${social.hover}`}
+                    className={`inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition ${social.hover} sm:w-auto`}
                   >
                     <span className="text-lg">{social.icon}</span>
                     {social.name}
@@ -184,18 +187,19 @@ const Contact = () => {
                 Quick Note
               </p>
               <p className="mt-3 text-white">
-                I enjoy working on responsive websites, learning new tools, and improving with every project I build.
+                I enjoy working on responsive websites, learning new tools, and
+                improving with every project I build.
               </p>
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-white/70 bg-white/80 p-6 sm:p-8 shadow-2xl backdrop-blur-md md:p-10">
+          <div className="rounded-[2rem] border border-white/70 bg-white/80 p-6 shadow-2xl backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/80 sm:p-8 md:p-10">
             <div className="mb-8 flex items-start justify-between gap-4">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-purple-500">
                   Send A Message
                 </p>
-                <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900">
+                <h2 className="mt-2 text-2xl font-bold text-gray-900 dark:text-slate-100 sm:text-3xl">
                   Start the conversation
                 </h2>
               </div>
@@ -208,7 +212,7 @@ const Contact = () => {
             <form onSubmit={onSubmit} className="space-y-5">
               <div className="grid gap-5 md:grid-cols-2">
                 <label className="block">
-                  <span className="mb-2 block text-sm font-medium text-gray-700">
+                  <span className="mb-2 block text-sm font-medium text-gray-700 dark:text-slate-200">
                     Your Name
                   </span>
                   <input
@@ -218,7 +222,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="Enter your name"
                     required
-                    className="w-full rounded-2xl border border-purple-100 bg-purple-50/60 px-4 py-3 text-gray-800 outline-none transition focus:border-purple-400 focus:bg-white focus:ring-4 focus:ring-purple-100"
+                    className="w-full rounded-2xl border border-purple-100 bg-purple-50/60 px-4 py-3 text-gray-800 outline-none transition focus:border-purple-400 focus:bg-white focus:ring-4 focus:ring-purple-100 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:focus:bg-slate-900 dark:focus:ring-purple-900/50"
                   />
                   <ValidationError
                     prefix="Name"
@@ -229,7 +233,7 @@ const Contact = () => {
                 </label>
 
                 <label className="block">
-                  <span className="mb-2 block text-sm font-medium text-gray-700">
+                  <span className="mb-2 block text-sm font-medium text-gray-700 dark:text-slate-200">
                     Email Address
                   </span>
                   <input
@@ -239,7 +243,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="Enter your email"
                     required
-                    className="w-full rounded-2xl border border-purple-100 bg-purple-50/60 px-4 py-3 text-gray-800 outline-none transition focus:border-purple-400 focus:bg-white focus:ring-4 focus:ring-purple-100"
+                    className="w-full rounded-2xl border border-purple-100 bg-purple-50/60 px-4 py-3 text-gray-800 outline-none transition focus:border-purple-400 focus:bg-white focus:ring-4 focus:ring-purple-100 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:focus:bg-slate-900 dark:focus:ring-purple-900/50"
                   />
                   <ValidationError
                     prefix="Email"
@@ -251,7 +255,7 @@ const Contact = () => {
               </div>
 
               <label className="block">
-                <span className="mb-2 block text-sm font-medium text-gray-700">
+                <span className="mb-2 block text-sm font-medium text-gray-700 dark:text-slate-200">
                   Message
                 </span>
                 <textarea
@@ -261,7 +265,7 @@ const Contact = () => {
                   placeholder="Tell me about your idea, feedback, or project..."
                   rows="7"
                   required
-                  className="w-full rounded-[1.5rem] border border-purple-100 bg-purple-50/60 px-4 py-3 text-gray-800 outline-none transition focus:border-purple-400 focus:bg-white focus:ring-4 focus:ring-purple-100"
+                  className="w-full rounded-[1.5rem] border border-purple-100 bg-purple-50/60 px-4 py-3 text-gray-800 outline-none transition focus:border-purple-400 focus:bg-white focus:ring-4 focus:ring-purple-100 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:focus:bg-slate-900 dark:focus:ring-purple-900/50"
                 />
                 <ValidationError
                   prefix="Message"
@@ -271,19 +275,17 @@ const Contact = () => {
                 />
               </label>
 
-              {formError ? (
-                <p className="text-sm text-red-500">{formError.message}</p>
-              ) : null}
+              {formError ? <p className="text-sm text-red-500">{formError.message}</p> : null}
 
               <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
-                <p className="max-w-sm text-sm text-gray-500">
+                <p className="max-w-sm text-sm text-gray-500 dark:text-slate-400">
                   I will do my best to respond as soon as possible.
                 </p>
 
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-[1.02]"
+                  className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-[1.02] sm:w-auto"
                 >
                   {state.submitting ? "Sending..." : "Send Message"}
                   <FaPaperPlane />

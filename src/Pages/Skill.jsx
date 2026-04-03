@@ -36,7 +36,7 @@ const skillCategories = [
     title: "Tools",
     skills: [
       { name: "Git", icon: <FaGitAlt />, color: "text-red-500" },
-      { name: "GitHub", icon: <FaGithub />, color: "text-gray-800" },
+      { name: "GitHub", icon: <FaGithub />, color: "text-gray-800 dark:text-slate-100" },
       { name: "Vite", icon: <SiVite />, color: "text-purple-500" },
       { name: "Responsive Design", icon: <FaMobileAlt />, color: "text-pink-500" },
     ],
@@ -45,9 +45,9 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section className="bg-gradient-to-br from-indigo-50 via-white to-pink-50 py-24">
+    <section className="bg-gradient-to-br from-indigo-50 via-white to-pink-50 py-24 transition-colors duration-300 dark:from-slate-950 dark:via-slate-900 dark:to-fuchsia-950">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h1 className="mb-14 text-center text-3xl font-bold sm:mb-20 sm:text-4xl md:text-5xl">
+        <h1 className="mb-14 text-center text-3xl font-bold text-slate-900 dark:text-slate-100 sm:mb-20 sm:text-4xl md:text-5xl">
           My Tech Stack
         </h1>
 
@@ -55,25 +55,22 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="rounded-3xl border border-white/40 bg-white/70 p-6 shadow-xl backdrop-blur-lg transition duration-500 hover:shadow-2xl sm:p-8"
+              className="rounded-3xl border border-white/40 bg-white/70 p-6 shadow-xl backdrop-blur-lg transition duration-500 hover:shadow-2xl dark:border-slate-800/70 dark:bg-slate-900/75 sm:p-8"
             >
-              <h2 className="mb-6 text-center text-xl font-bold sm:mb-8 sm:text-2xl">
+              <h2 className="mb-6 text-center text-xl font-bold text-slate-900 dark:text-slate-100 sm:mb-8 sm:text-2xl">
                 {category.title}
               </h2>
 
               <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
                 {category.skills.map((skill, i) => (
-                  <div
-                    key={i}
-                    className="group flex cursor-pointer flex-col items-center"
-                  >
+                  <div key={i} className="group flex cursor-pointer flex-col items-center">
                     <div
-                      className={`flex h-14 w-14 items-center justify-center rounded-full bg-white text-2xl shadow-md transition duration-300 group-hover:scale-110 group-hover:shadow-2xl sm:h-16 sm:w-16 sm:text-3xl ${skill.color}`}
+                      className={`flex h-14 w-14 items-center justify-center rounded-full bg-white text-2xl shadow-md transition duration-300 group-hover:scale-110 group-hover:shadow-2xl dark:bg-slate-950 sm:h-16 sm:w-16 sm:text-3xl ${skill.color}`}
                     >
                       {skill.icon}
                     </div>
 
-                    <p className="mt-3 text-sm font-semibold opacity-80 group-hover:opacity-100">
+                    <p className="mt-3 text-sm font-semibold text-slate-700 opacity-80 group-hover:opacity-100 dark:text-slate-200">
                       {skill.name}
                     </p>
                   </div>
