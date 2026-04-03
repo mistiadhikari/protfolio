@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../Context/ThemeContext";
+import { FaHome } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,7 +54,7 @@ const Navbar = () => {
               className="rounded-md px-2 py-1 text-sm font-semibold text-slate-700 dark:text-white"
               aria-label="Toggle menu"
             >
-              Menu
+            <FaHome size={22} className="text-purple-500 hover:text-yellow-300 transition" />
             </button>
           </div>
         </div>
