@@ -11,8 +11,9 @@ export const allProjects = [
       "A responsive pet care website where users can explore services and book appointments.",
     tech: ["React", "Tailwind", "React Router"],
     category: "React",
-    github: "#",
-    live: "#",
+    githubFrontend: "https://github.com/mistiadhikari/petui",
+    githubBackend:"https://github.com/mistiadhikari/petback",
+    live: "https://pawjimmy.vercel.app/",
   },
   {
     title: "Portfolio Website",
@@ -21,27 +22,9 @@ export const allProjects = [
       "My personal portfolio built with React to showcase my projects and skills.",
     tech: ["React", "Tailwind"],
     category: "React",
-    github: "#",
-    live: "#",
+    github: "https://github.com/mistiadhikari/protfolio",
+    live: "https://www.misti.com.np/",
   },
-  {
-    title: "Task Manager",
-    image: Task,
-    description:
-      "A simple task management web application for organizing daily tasks.",
-    tech: ["JavaScript", "React"],
-    category: "JS",
-    github: "#",
-    live: "#",
-  },
-  {
-    title: "BIM Visualization",
-    image: Bim,
-    description:
-      "A 3D building visualization project from my BIM coursework.",
-    tech: ["Revit", "BIM"],
-    category: "BIM",
-    github: "#",
-    live: "#",
-  },
+ 
+  
 ];

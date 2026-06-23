@@ -9,13 +9,12 @@ import {
 } from "react-icons/fa";
 import { allProjects } from "../Data/ProjectsData";
 
-const categories = ["All", "React", "JS", "BIM"];
+const categories = ["All", "React"];
 
 const categoryStyles = {
   All: "from-gray-900 to-gray-700",
   React: "from-cyan-500 to-blue-600",
-  JS: "from-amber-400 to-orange-500",
-  BIM: "from-emerald-500 to-teal-600",
+ 
 };
 
 const Project = () => {
@@ -55,7 +54,7 @@ const Project = () => {
             <div className="mt-8 flex flex-wrap gap-4">
               {[
                 { label: "Projects Built", value: `${allProjects.length}+` },
-                { label: "Main Focus", value: "React UI" },
+                { label: "Main Focus", value: "React & MERN" },
                 { label: "Approach", value: "Learn by building" },
               ].map((item) => (
                 <div
@@ -183,25 +182,53 @@ const Project = () => {
                 </div>
 
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gray-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-800 dark:bg-slate-100 dark:text-slate-950 dark:hover:bg-slate-200 sm:w-auto"
-                  >
-                    <FaGithub />
-                    View Code
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gray-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-800 dark:bg-slate-100 dark:text-slate-950 dark:hover:bg-slate-200 sm:w-auto"
+                    >
+                      <FaGithub />
+                      View Code
+                    </a>
+                  )}
 
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-purple-200 bg-white px-4 py-3 text-sm font-semibold text-purple-700 transition hover:bg-purple-50 dark:border-purple-800 dark:bg-slate-950 dark:text-purple-300 dark:hover:bg-slate-900 sm:w-auto"
-                  >
-                    <FaExternalLinkAlt />
-                    Live Preview
-                  </a>
+                  {project.githubFrontend && (
+                    <a
+                      href={project.githubFrontend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gray-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-800 dark:bg-slate-100 dark:text-slate-950 dark:hover:bg-slate-200 sm:w-auto"
+                    >
+                      <FaGithub />
+                      Frontend Code
+                    </a>
+                  )}
+
+                  {project.githubBackend && (
+                    <a
+                      href={project.githubBackend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gray-800 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 sm:w-auto"
+                    >
+                      <FaGithub />
+                      Backend Code
+                    </a>
+                  )}
+
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-purple-200 bg-white px-4 py-3 text-sm font-semibold text-purple-700 transition hover:bg-purple-50 dark:border-purple-800 dark:bg-slate-950 dark:text-purple-300 dark:hover:bg-slate-900 sm:w-auto"
+                    >
+                      <FaExternalLinkAlt />
+                      Live Preview
+                    </a>
+                  )}
                 </div>
               </div>
             </article>

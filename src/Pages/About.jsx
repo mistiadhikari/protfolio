@@ -6,19 +6,19 @@ const highlights = [
   {
     title: "Education",
     description:
-      "Bachelor of Information Management with a growing interest in building modern digital products.",
+      "Currently pursuing a Bachelor of Information Management (BIM) while building a strong foundation in technology, creativity, and problem-solving.",
     icon: <FaGraduationCap />,
   },
   {
     title: "Current Focus",
     description:
-      "Sharpening my frontend and full stack skills through React projects and hands-on practice.",
+      "Exploring modern web development with React and growing my skills in the MERN stack by building practical and user-focused projects.",
     icon: <FaLaptopCode />,
   },
   {
     title: "Mindset",
     description:
-      "Curious, creative, and committed to turning ideas into clean and user-friendly experiences.",
+      "Curious, creative, and committed to turning ideas into clean, meaningful, and user-friendly digital experiences.",
     icon: <FaLightbulb />,
   },
 ];
@@ -39,8 +39,8 @@ const About = () => {
             About Me
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base text-gray-600 dark:text-slate-300 sm:text-lg">
-            A learner who enjoys blending creativity, technology, and curiosity to build
-            meaningful web experiences.
+            A passionate learner who enjoys blending creativity, technology, and curiosity
+            to create meaningful web experiences.
           </p>
         </div>
 
@@ -51,19 +51,19 @@ const About = () => {
 
             <div className="relative rounded-[2rem] border border-white/70 bg-white/70 p-3 shadow-2xl backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-900/75 sm:p-4">
               <div className="absolute left-4 top-4 max-w-[11rem] rounded-full bg-white/90 px-3 py-2 text-xs font-semibold text-gray-700 shadow dark:bg-slate-950/90 dark:text-slate-200 sm:left-6 sm:top-6 sm:max-w-none sm:text-sm">
-                Creative Developer Journey
+                My Developer Journey
               </div>
 
               <img
                 src={Miss}
-                alt="Misti portrait"
+                alt="Misti profile"
                 className="h-[22rem] w-full rounded-[1.5rem] object-cover sm:h-[26rem] lg:h-[28rem]"
               />
 
               <div className="absolute -bottom-4 right-4 max-w-[12rem] rounded-2xl bg-gray-900 px-4 py-3 text-white shadow-xl dark:bg-slate-950 sm:-bottom-6 sm:right-6 sm:max-w-[14rem] sm:px-5 sm:py-4">
-                <p className="text-sm font-medium text-purple-200">Currently exploring</p>
+                <p className="text-sm font-medium text-purple-200">Currently learning</p>
                 <p className="mt-1 text-sm font-semibold sm:text-lg">
-                  React, UI design, and full stack development
+                  React and the MERN Stack
                 </p>
               </div>
             </div>
@@ -76,28 +76,31 @@ const About = () => {
 
             <div className="mt-6 space-y-5 text-gray-600 dark:text-slate-300">
               <p>
-                I recently graduated with a degree in
+                I am currently pursuing a degree in
                 <span className="font-semibold text-gray-800 dark:text-slate-100">
                   {" "}
                   Bachelor of Information Management (BIM)
                 </span>
-                . My academic journey helped me understand how technology and structure
-                can work together to solve real problems.
+                . My academic journey is helping me build a strong understanding of
+                technology, creativity, and how digital solutions can be used to solve
+                real-world problems.
               </p>
 
               <p>
-                Right now, I am exploring
+                Alongside my studies, I have been exploring web development with a
+                growing interest in the
                 <span className="font-semibold text-gray-800 dark:text-slate-100">
                   {" "}
-                  Full Stack Web Development
+                  MERN stack
                 </span>
-                and enjoying the process of building responsive, user-friendly
-                applications with HTML, CSS, JavaScript, and React.
+                . I enjoy building responsive interfaces, learning how frontend and
+                backend connect, and turning ideas into interactive web experiences.
               </p>
 
               <p>
-                My goal is to keep learning, strengthen my development skills, and
-                create digital solutions that feel both useful and visually engaging.
+                My goal is to keep improving through hands-on projects, strengthen my
+                development skills, and grow into a confident developer who creates
+                clean, useful, and visually engaging digital products.
               </p>
             </div>
 
@@ -107,7 +110,7 @@ const About = () => {
                   Focus Area
                 </p>
                 <p className="mt-2 text-xl font-semibold">
-                  Frontend and Full Stack Growth
+                  React and MERN Stack Development
                 </p>
               </div>
 

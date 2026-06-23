@@ -18,12 +18,7 @@ const contactCards = [
     icon: <FaEnvelope />,
     href: "mailto:mistichettri815@gmail.com",
   },
-  {
-    title: "Phone",
-    value: "+977-9821594700",
-    icon: <FaPhoneAlt />,
-    href: "tel:+9779821594700",
-  },
+  
   {
     title: "Location",
     value: "Nepal",
